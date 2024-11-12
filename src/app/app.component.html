@@ -1,0 +1,22 @@
+<header class="w-full px-4">
+  <nav class="navbar flex justify-end gap-4 w-full">
+    @if (isLoggedIn) {
+    <a
+      class="link link-hover"
+      routerLink="/admin"
+      routerLinkActive="link-primary"
+      >Admin</a
+    >
+    <a
+      class="link link-hover"
+      routerLink="/employee"
+      routerLinkActive="link-primary"
+      >Employee</a
+    >
+    <button class="link link-hover" (click)="logout()">Logout</button>
+    }
+  </nav>
+</header>
+<div class="content" role="main">
+  <router-outlet></router-outlet>
+</div>
